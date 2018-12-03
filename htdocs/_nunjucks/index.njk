@@ -1,0 +1,20 @@
+{% extends "_partials/layout/_base.njk" %}
+{%- set pagename = top -%}
+
+{% block css -%}
+{{ super() }}
+<link rel="stylesheet" href="/css/top.css">
+{%- endblock %}
+
+{% block content -%}
+
+{% set breadcrumbs = [{item: '第二階層', href: '/example.html'}, {item: '第三階層'}] -%}
+{%- include '_partials/layout/_breadcrumb.njk' %}
+{{ macro.picture('example_sm.jpg', media='min-width: 640px') }}
+
+{%- endblock %}
+
+{% block js -%}
+{{ super() }}
+<script src="/js/top.js"></script>
+{%- endblock %}

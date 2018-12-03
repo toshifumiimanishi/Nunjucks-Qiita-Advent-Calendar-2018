@@ -1,0 +1,11 @@
+{% macro picture(src, alt='', className='', media='min-width: 768px') -%}
+<picture{{ ' class="' + className + '"' if className }}>
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
+  <source srcset="{{ src | replace('_sm.', '_lg.') }}" media="({{ media }})">
+  <!--[if IE 9]></video><![endif]--><img src="{{ src }}" alt="{{ alt }}">
+</picture>
+{%- endmacro %}
+
+{% macro svg(fragment, className='', viewbox='') -%}
+<svg{{ ' class="' + className + '"' if className }}{{ ' viewbox="' + viewbox + '"' if viewbox }}><use xlink:href="/img/common/sprite.svg#{{ fragment }}" /></svg>
+{%- endmacro %}

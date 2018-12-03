@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ pagename.title }}</title>
+<meta name="description" content="{{ pagename.description }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="{{ pagename.title }}">
+<meta property="og:description" content="{{ pagename.description }}">
+<meta property="og:type" content="{{ 'website' if pagename === top else 'article' }}">
+<meta property="og:url" content="{{ path.absolute }}">
+<meta property="og:image" content="{{ pagename.ogimage }}">
+<meta property="fb:app_id" content="＊＊＊＊">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ pagename.title }}">
+<meta name="twitter:description" content="{{ pagename.description }}">
+<meta name="twitter:url" content="{{ path.absolute }}">
+<meta name="twitter:image" content="{{ pagename.twitterimage }}">
